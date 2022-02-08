@@ -16,7 +16,19 @@
         <h1>welcome to my website</h1>
     </header>
     <main>
-<section>
+<section id="blogs" class="blogs">
+    <header>
+
+        <h2>Blogs list
+        </h2>
+        <ul id="blog-list">
+            
+            <li>Blogs-1</li>
+            <li>Blogs-2</li>
+            <li>Blogs-3</li>
+            <li>Blogs-4</li>
+        </ul>
+    </header>
     <article class="blog">
     <h3>my awesome blog-1</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores laboriosam hic asperiores provident? Explicabo autem reprehenderit nesciunt! Harum delectus veniam iure eaque nesciunt iusto vel repellendus minima voluptas praesentium! Iure.</p>
@@ -44,14 +56,41 @@
         //Aita JAvascript dea style korar niyom
         const secondTitle=document.getElementById('second-title');
         secondTitle.style.textAlign='center'
-        //explore getelementsByClassName
-        const blogs=document.getElementsByClassName('blog')
+        
+       // create and add element by using JS
+       //create the element
+
+       const li =document.createElement('li');
+       li.innerText='Blog-5';
+       //where to add
+       const ul=document.getElementById('blog-list')
+       //append new element
+       ul.appendChild(li)
+       //add article
+       const article=document.createElement('article');
+       article.classList.add('blog')
+       const h3=document.createElement('h3');
+       h3.innerText='my awesome blog-5';
+       const p=document.createElement('p');
+       p.innerText="Ab ducimus voluptas praesentium suscipit pariatur id alias sed, odit repudiandae consequuntur nulla ipsum quo quaerat provident quisquam ratione cumque accusantium labore ad veniam non soluta perferendis! Explicabo, sequi perspiciatis."
+       article.appendChild(h3);
+       article.appendChild(p);
+
+       //parent of article
+       const blogsSection=document.getElementById('blogs')
+       blogsSection.appendChild(article)
+
+       //explore getelementsByClassName
+       const blogs=document.getElementsByClassName('blog')
 ;
        for(const blog of blogs){
            blog.style.border='2px solid orange';
            blog.style.borderRadius='10px';
-           blog.style.margin='15px'
+           blog.style.margin='20px'
        }
+
+
+
     </script>
 
 </body>
