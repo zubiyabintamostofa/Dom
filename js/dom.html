@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .blog{
+            border: 2px solid green;
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>welcome to my website</h1>
+    </header>
+    <main>
+<section>
+    <article class="blog">
+    <h3>my awesome blog-1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores laboriosam hic asperiores provident? Explicabo autem reprehenderit nesciunt! Harum delectus veniam iure eaque nesciunt iusto vel repellendus minima voluptas praesentium! Iure.</p>
+    </article>
+    <article class="blog">
+        <h3 id="second-title">my awesome blog-2</h3>
+        <p>Amet totam inventore corporis, odit libero temporibus voluptate rerum labore, illum eaque ducimus veniam perferendis! Quasi eveniet unde dolorem, vitae ab optio minus ipsam corrupti nulla labore soluta officia id!</p>
+    </article>
+    <article class="blog">
+        <h3>my awesome blog-3</h3>
+        <p>Ab ducimus voluptas praesentium suscipit pariatur id alias sed, odit repudiandae consequuntur nulla ipsum quo quaerat provident quisquam ratione cumque accusantium labore ad veniam non soluta perferendis! Explicabo, sequi perspiciatis.</p>
+    </article>
+</section>
+    </main>
+    <script>
+        const student={
+            name:'libi',age:16,height:60
+        }
+        //console.log(document);
+        const blogTitles=document.getElementsByTagName('h3');
+        for(const h3 of blogTitles){
+           // console.log(h3.innerText);//eita text dekher niyom
+
+        }
+        //Aita JAvascript dea style korar niyom
+        const secondTitle=document.getElementById('second-title');
+        secondTitle.style.textAlign='center'
+        //explore getelementsByClassName
+        const blogs=document.getElementsByClassName('blog')
+;
+       for(const blog of blogs){
+           blog.style.border='2px solid orange';
+           blog.style.borderRadius='10px';
+           blog.style.margin='9px'
+       }
+    </script>
+
+</body>
+</html>
